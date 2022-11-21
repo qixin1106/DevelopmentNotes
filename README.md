@@ -1,6 +1,5 @@
 # Qixin的开发笔记
 
-以下内容为实际工作中使用到的技术笔记:
 
 ### 机器人硬件相关
 
@@ -18,6 +17,3 @@
 
 - [macOS屏幕录制笔记](https://github.com/qixin1106/DevelopmentNotes/blob/master/macOS屏幕录制/README.md)
 
-以下内容为学习记录笔记:
-
-- 略
