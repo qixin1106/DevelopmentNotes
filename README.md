@@ -6,7 +6,7 @@
 
 ### 点云数据渲染
 
-- [点云渲染 for iOS](https://github.com/qixin1106/DevelopmentNotes/blob/master/点云3D渲染/README.md)
+- [点云渲染 for iOS 笔记](https://github.com/qixin1106/DevelopmentNotes/blob/master/点云3D渲染/README.md)
 
 ### PJSIP
 
@@ -18,4 +18,4 @@
 
 ### VideoToolBox编解码
 
-- [H264编解码 for iOS/macOS](https://github.com/qixin1106/DevelopmentNotes/blob/master/VideoToolbox编解码/README.md)
+- [H264编解码 for iOS/macOS 笔记](https://github.com/qixin1106/DevelopmentNotes/blob/master/VideoToolbox编解码/README.md)
