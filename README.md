@@ -17,3 +17,6 @@
 
 - [macOS屏幕录制笔记](https://github.com/qixin1106/DevelopmentNotes/blob/master/macOS屏幕录制/README.md)
 
+### iOS逆向
+
+- [iOS砸壳实践](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS砸壳实践/README.md)
