@@ -27,4 +27,4 @@
 
 ### APK初级反编译学习
 
-- [APK初级反编译学习]((https://github.com/qixin1106/DevelopmentNotes/blob/master/APK初级反编译实践/README.md)
+- [APK初级反编译学习](https://github.com/qixin1106/DevelopmentNotes/blob/master/APK初级反编译实践/README.md)
