@@ -65,8 +65,12 @@ waiting for connection"
 * 新开一个命令行窗口
 ```shell
 # cd到你下载frida-ios-dump的目录
-.dump.py [你要砸的程序名字] 或 [程序的bundle id]
+./dump.py [你要砸的程序名字] 或 [程序的bundle id]
 ```
+
+> **非常重要:**
+> 使用./dump.py脚本之前一定要确保你被砸壳的app启动
+> 我理解的砸壳的原理就是,本机下载的app都是有壳的,启动时系统必须先解密,相当于内存中的是解密之后的程序,并且Frida砸壳时,可能还要注入代码等.
 
 * 成功后在你的frida-ios-dump目录下,会多一个ipa(砸完壳)
 
