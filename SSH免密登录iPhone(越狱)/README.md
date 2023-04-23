@@ -3,7 +3,7 @@
 * iphone越狱
 * Cydia安装openSSH
 
-### 正常ssh登录iphone
+## 正常ssh登录iphone
 
 * 在同一个局域网下
 * 查看iphone的ip地址
@@ -22,7 +22,7 @@ Are you sure you want to continue connecting (yes/no)?
 
 默认情况下密码是`alpine`
 
-### 修改登录密码
+## 修改登录密码
 
 ```shell
 # 修改root密码
@@ -30,7 +30,7 @@ passwd root
 ```
 然后输入新密码,再次验证密码.
 
-### 忘记密码
+## 忘记密码
 
 如果忘记了密码,你可以手动恢复一下.
 
@@ -46,7 +46,7 @@ root:/smx7MYTQIi2M:0:0::0:0:System Administrator:/var/root:/bin/sh
 > 替换为`/smx7MYTQIi2M`,即改为原始默认密码`alpine`
 
 
-### SSH免密登录
+## SSH免密登录
 
 在macOS电脑中打开.ssh文件夹
 
