@@ -34,4 +34,4 @@
 ### 其他
 
 - [macOS系统文件夹作用记录](https://github.com/qixin1106/DevelopmentNotes/blob/master/macOS系统文件夹作用记录/README.md)
-- [Xcode-macOS-Hardened Runtime(强化运行时)选项介绍](https://github.com/qixin1106/DevelopmentNotes/blob/master/Xcode-macOS-Hardened_Runtime(强化运行时)选项介绍/README.md)
+- [Xcode-macOS-Hardened Runtime(强化运行时)选项介绍](https://github.com/qixin1106/DevelopmentNotes/blob/master/macOS强化运行时配置说明/README.md)
