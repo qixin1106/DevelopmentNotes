@@ -27,6 +27,8 @@
 
 - [APK初级反编译学习](https://github.com/qixin1106/DevelopmentNotes/blob/master/APK初级反编译实践/README.md)
 
+- [SSH免密登录iPhone(越狱)](https://github.com/qixin1106/DevelopmentNotes/blob/master/SSH免密登录iPhone(越狱)/README.md)
+
 ### 业务
 
 - [二维码登录流程](https://github.com/qixin1106/DevelopmentNotes/blob/master/二维码登录流程/README.md)
