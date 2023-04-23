@@ -30,3 +30,7 @@
 ### 业务
 
 - [二维码登录流程](https://github.com/qixin1106/DevelopmentNotes/blob/master/二维码登录流程/README.md)
+
+### 其他
+
+- [macOS系统文件夹作用记录](https://github.com/qixin1106/DevelopmentNotes/blob/master/macOS系统文件夹作用记录/README.md)
