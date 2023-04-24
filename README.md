@@ -29,6 +29,8 @@
 
 - [SSH免密登录iPhone(越狱)](https://github.com/qixin1106/DevelopmentNotes/blob/master/SSH免密登录iPhone(越狱)/README.md)
 
+- [Theos插件Tweak基本使用](https://github.com/qixin1106/DevelopmentNotes/blob/master/Theos插件Tweak基本使用/README.md)
+
 ### 业务
 
 - [二维码登录流程](https://github.com/qixin1106/DevelopmentNotes/blob/master/二维码登录流程/README.md)
