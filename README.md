@@ -42,3 +42,5 @@
 - [Xcode-macOS-Hardened Runtime(强化运行时)选项介绍](https://github.com/qixin1106/DevelopmentNotes/blob/master/macOS强化运行时配置说明/README.md)
 
 - [老iPhone_dyld_shared_cache_extract_dylibs_failed](https://github.com/qixin1106/DevelopmentNotes/blob/master/老iPhone_dyld_shared_cache_extract_dylibs_failed/README.md)
+
+- [The application could not be verified问题](https://github.com/qixin1106/DevelopmentNotes/blob/master/The%20application%20could%20not%20be%20verified问题/README.md)
