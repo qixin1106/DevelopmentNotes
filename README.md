@@ -33,6 +33,8 @@
 
 - [iOSOpenDev使用踩坑实践](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOSOpenDev%20Tweak实践/README.md)
 
+- [Xcode中Run三方app](https://github.com/qixin1106/DevelopmentNotes/blob/master/Xcode中Run三方app/README.md)
+
 ### 业务
 
 - [二维码登录流程](https://github.com/qixin1106/DevelopmentNotes/blob/master/二维码登录流程/README.md)
