@@ -102,6 +102,8 @@ void disable_debug(void) {
 > 这段代码的作用是禁止调试器附加到应用程序进程上。
  
  
+-------
+
 ### 方法2: 导入头文件\<sys/ptrace.h>
  
  先创建一个macos平台项目, 随便找个位置导入#import \<sys/ptrace.h>,追踪到ptrace.h中, 将该头文件复制到iOS项目中, 你可以自定义一个Header文件加入到iOS项目中. 代码如下:
@@ -159,6 +161,8 @@ __END_DECLS
 ptrace(PT_DENY_ATTACH, 0, 0, 0);
 ```
 
+-------
+
 ### 方法3: syscall
 
 在iOS平台下，syscall函数是一个系统调用，它是程序请求操作系统提供服务的编程方式。它可以包括与硬件相关的服务（例如，访问硬盘驱动器或访问设备的相机），创建和执行新进程以及与内核服务进行通信。
@@ -177,4 +181,41 @@ syscall()函数的第一个参数是系统调用号，后面的参数是传递�
 ```
 
 [第一个参数的编号说明参考Wiki](https://www.theiphonewiki.com/wiki/Kernel_Syscalls)
+
+
+-------
+
+### 方法4: sysctl
+
+sysctl()函数用于在内核运行时动态地修改内核的运行参数，可用的内核参数在目录 /proc/sys 中。它包含一些TCP/IP堆栈和虚拟内存系统的高级选项，可以让有经验的管理员提高引人注目的系统性能。用sysctl()可以读取设置超过五百个系统变量。
+
+使用sysctl()函数来检查当前进程是否正在被调试。它通过调用sysctl()函数来获取当前进程的kinfo_proc结构体信息，然后检查该结构体中的p_flag成员是否包含P_TRACED标志。如果包含，则说明当前进程正在被调试，函数返回YES，否则返回NO。
+
+```c
+#import <sys/sysctl.h>
+BOOL test_sysctl(void) {
+    int name[4];
+    struct kinfo_proc info;
+    size_t info_size = sizeof(info);
+    
+    info.kp_proc.p_flag = 0;
+    
+    name[0] = CTL_KERN;
+    name[1] = KERN_PROC;
+    name[2] = KERN_PROC_PID;
+    name[3] = getpid();
+    
+    if (sysctl(name, 4, &info, &info_size, NULL, 0) == -1) {
+        NSLog(@"sysctl error ...");
+        return NO;
+    }
+    
+    return ((info.kp_proc.p_flag & P_TRACED) != 0);
+}
+```
+
+> 该方法由于和之前三个方式不同,只是做为标志位查询,获取的结果之后的crash等操作,需要由您来自定义完成.当然也可以不crash,只做记录也可以.
+
+> 另外,该方法仅仅是查询一次,如果您需要轮询查询,则需要自己实现轮询逻辑.
+
 
