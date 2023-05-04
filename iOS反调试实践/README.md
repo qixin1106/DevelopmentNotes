@@ -1,4 +1,5 @@
-# iOS防调试实践
+# iOS防调试实践(防)
+
 
 ### ptrace函数
 
@@ -219,3 +220,6 @@ BOOL test_sysctl(void) {
 > 另外,该方法仅仅是查询一次,如果您需要轮询查询,则需要自己实现轮询逻辑.
 
 
+## 反防调试
+
+[iOS反防调试](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS反防调试实践/README.md)

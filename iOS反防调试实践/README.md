@@ -1,4 +1,4 @@
-# iOS反防调试实践
+# iOS反防调试实践(攻)
 
 分别是对ptrace, syscall, sysctl, dlsym 4种方式进行反防调试
 
@@ -6,6 +6,7 @@
 
 [代码示例Demo](https://github.com/qixin1106/iOS_Anti_Debug_Demo)
 
+[iOS防调试](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS反调试实践/README.md)介绍
 
 ## 反ptrace
 
@@ -113,3 +114,4 @@ void anti_syscall(void) {
 ```
 
 > 拦截syscall函数,判断第一个参数是否是26,26意味着,调用的是`ptrace`函数,第二个参数如果是`PT_DENY_ATTACH`31的话,代表对方使用syscall来调用`ptrace`,过滤掉.
+
