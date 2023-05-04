@@ -21,9 +21,9 @@
 
 - [iOS砸壳实践](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS砸壳实践/README.md)
 
-- [iOS反调试实践](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS反调试实践/README.md)
+- [iOS反调试实践(防)](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS反调试实践/README.md)
 
-- [iOS反防调试实践](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS反防调试实践/README.md)
+- [iOS反防调试实践(攻)](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS反防调试实践/README.md)
 
 - [iOS小红书ipa分析学习](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS小红书分析学习/README.md)
 
