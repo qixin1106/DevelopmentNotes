@@ -31,7 +31,7 @@
 
 - [SSH免密登录iPhone(越狱)](https://github.com/qixin1106/DevelopmentNotes/blob/master/SSH免密登录iPhone(越狱)/README.md)
 
-- [Theos插件Tweak基本使用](https://github.com/qixin1106/DevelopmentNotes/blob/master/Theos插件Tweak基本使用/Theos_tweak_hook_实践记录.md)
+- [Theos插件Tweak基本使用](https://github.com/qixin1106/DevelopmentNotes/blob/master/Theos插件Tweak基本使用/README.md)
 
 - [iOSOpenDev使用踩坑实践](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOSOpenDev%20Tweak实践/README.md)
 
