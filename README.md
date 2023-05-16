@@ -29,6 +29,8 @@
 
 - [APK初级反编译学习](https://github.com/qixin1106/DevelopmentNotes/blob/master/APK初级反编译实践/README.md)
 
+- [SSH连iPhone(越狱)](https://github.com/qixin1106/DevelopmentNotes/blob/master/OpenSSH连越狱iPhone/README.md)
+
 - [SSH免密登录iPhone(越狱)](https://github.com/qixin1106/DevelopmentNotes/blob/master/SSH免密登录iPhone(越狱)/README.md)
 
 - [Theos插件Tweak基本使用](https://github.com/qixin1106/DevelopmentNotes/blob/master/Theos插件Tweak基本使用/README.md)
