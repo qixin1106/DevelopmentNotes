@@ -43,6 +43,10 @@
 
 - [防止Cydia插件](https://github.com/qixin1106/DevelopmentNotes/blob/master/防Cydia插件/README.md) 
 
+- [恢复符号表restore-symbol](https://github.com/qixin1106/DevelopmentNotes/blob/master/恢复符号表restore-symbol/README.md) 
+
+- [Cycript动态调试实践](https://github.com/qixin1106/DevelopmentNotes/blob/master/Cycript动态调试实践/README.md) 
+
 ### 业务
 
 - [二维码登录流程](https://github.com/qixin1106/DevelopmentNotes/blob/master/二维码登录流程/README.md)
