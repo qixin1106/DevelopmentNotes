@@ -170,3 +170,134 @@ null
 ```objc
 [#"<KEPActionButton: 0x140963260; baseClass = UIButton; frame = (46 271.667; 322 50); clipsToBounds = YES; opaque = NO; layer = <CALayer: 0x140942090>>"]
 ```
+
+### ObjectiveC.classes
+
+打印所有类
+
+### *#地址/*对象
+
+打印该对象的所有成员变量
+
+`*UIApp` 或 `*#0x14ee9e5a0`
+
+```c
+{isa:UIApplication,_hasAlternateNextResponder:false,_hasInputAssistantItem:false,_delegate:(typedef void*)(0x14eface20),_exclusiveTouchWindows:[NSSet setWithArray:@[]]],_event:#"<UIEvent: 0x14efc6b30>",_touchesEvent:#"<UITouchesEvent: 0x14efaa770> timestamp: 184630 touches: {(\n)}",......
+```
+
+## 关于.cy脚本
+
+我们可以将一些常用的方法写到脚本里,这样使用时会比较方便.
+
+
+### 一个简单的测试脚本示例
+
+* QXTool.cy 
+
+```js
+(function(exports) {
+
+	// 测试一个加法方法
+	// exports.sum() 等价于 QXTool.sum()
+	exports.sum = function(a, b) {
+		return a + b
+	}
+
+	// 获取appid
+	exports.appId = [NSBundle mainBundle].bundleIdentifier
+
+	// 获取document路径
+	exports.documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]
+
+	// 获取当前rootVC
+	// 使用函数调用可以是实时获取rootViewController的值
+	// 如果不使用,则在导入脚本之后一次性赋值,后面将不会在改变
+	exports.rootVC = function() {
+		return UIApp.keyWindow.rootViewController
+	}
+	
+})(exports)
+```
+
+##### 如`exports.appId = xxxx` 直接赋值的形式来写,则导入脚本之后一次性赋值,后面将不会在改变,类似appId这种值,基本不会改变,所以我们可以直接赋值.
+##### 如`exports.rootVC = function() {}` 这种因为rootViewController在不同时期,可能会产生变化,因此我们需要使用函数调用方式,这样每次调用时,可获得当前状态下的值.
+
+
+### .cy使用方法
+
+当我们写完一个脚本之后,首先要复制到手机中,我们通过`iFunBox`或者`scp`命令来复制文件
+
+手机文件路径:
+#### `/usr/lib/cycript0.9`
+
+![-w273](media/16842350287283/16848350353363.jpg)
+
+你可以将脚本直接放在根目录, 也可以选择放在`com`目录中
+
+放在`com`目录中, 需要按照域名倒序的方式命名(参考appID)
+
+如: 
+
+#### `/com/qixin/QXTool.cy`
+
+这样的话,导入脚本时,需要指定位置.
+
+### 导入脚本
+
+```shell
+cy# @import QXTool
+```
+> {sum:function (t,e){return t+e},appId:@"com.qixin.douyin.re",documentPath:@"/var/mobile/Containers/Data/Application/0FCBC2B4-00CE-4EB4-A936-0A26D8487CA8/Documents",rootVC:function (){return UIApp.keyWindow.rootViewController}}
+
+看到反馈出你的注册成功,没有报错.
+
+如果你放置脚本在`com/qixin/`这种形式,那么导入时需要注意:
+
+```shell
+cy# @import com.qixin.QXTool2
+```
+
+### 使用脚本
+
+![-w325](media/16842350287283/16848358496469.jpg)
+![-w348](media/16842350287283/16848358696169.jpg)
+![-w571](media/16842350287283/16848359168228.jpg)
+
+### 自动补全
+
+我们可以通过按 `tab` 来激活联想(自动补全), 如果有选个选择, 会贴心的帮你列出所有建议
+
+![-w282](media/16842350287283/16848360279082.jpg)
+
+> 需要多按几次,第一次可能会帮你匹配一个最接近的.然后再按会帮你列出可能匹配结果.
+
+### 固定框架
+
+```js
+(function(exports) {
+    // 你的代码
+})(exports)
+```
+> 这个是固定写法,你需要关注的是中间代码实现的部分
+
+
+### 关于全局变量
+
+我们刚才介绍了通过` exports.xxxx `方式来实现, 这种相当于成员方法,调用时,需要`QXTool.xxxx()`来调用,如果你觉得这个太麻烦了,也可以改成全局函数方式,如下:
+
+```js
+/*
+exports.sum = function(a, b) {
+    return a + b
+}
+*/
+
+// 修改为:
+
+QXTSum = function(a, b) {
+    return a + b
+}
+```
+
+那么当你调用时,可以直接通过 `QXTSum(1, 2)` 的方式来调用.
+##### 为了不引起冲突,你可以参考OC命名的方式,加上你的特殊前缀即可,建议使用三个大写字母来做区分
