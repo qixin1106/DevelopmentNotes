@@ -182,3 +182,8 @@ export THEOS_DEVICE_IP=192.168.x.xxx
 
 ![-w379](media/16822571485031.jpg)
 
+
+## 如何将资源文件一同打包进app
+
+你需要再tweak项目文件夹中创建一个`layout`文件夹, 然后将你的资源copy到其中,`layout`中也可以创建不同的文件夹,总之,里面的目录结构会原封不动的copy到app根目录中.
+
