@@ -200,3 +200,8 @@ export THEOS_DEVICE_IP=192.168.x.xxx
 * 当你打开一个app时,它会在`/Library/MoblieSubstrate/DynamicLibraries/`中查找所有的plist,比对其中的appid和你打开的app的id是否一致,如果一致则,去加载对应的动态库.
 * 动态库会对内存中的代码执行流程进行修改.当你原程序中调用了你hook的方法时,将会被调到动态库中的对应方法中.
 
+## Tweak同时编写多个文件
+
+* 首先你要创建一个新的.x文件或者创建objc class文件(.h+.m)也可以
+* 修改Makefile文件中的配置, 增加你要编译的文件, 在我的项目中找到`QixinFirstTweak_FILES = Tweak.x`
+* 将你要添加编译的文件增加到后面,使用`空格`分隔,比如:`QixinFirstTweak_FILES = Tweak.x other1.x other2.x other3.m`
