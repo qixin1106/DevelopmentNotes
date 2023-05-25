@@ -205,3 +205,6 @@ export THEOS_DEVICE_IP=192.168.x.xxx
 * 首先你要创建一个新的.x文件或者创建objc class文件(.h+.m)也可以
 * 修改Makefile文件中的配置, 增加你要编译的文件, 在我的项目中找到`QixinFirstTweak_FILES = Tweak.x`
 * 将你要添加编译的文件增加到后面,使用`空格`分隔,比如:`QixinFirstTweak_FILES = Tweak.x other1.x other2.x other3.m`
+* 你也可以使用`*.x`通配符这种形式来指定,但是需要注意的是,如果你的目录是分文件夹的,那么你需要将文件的路径写清楚,如:`QixinFirstTweak_FILES = src/*.x src/module1/*.xm src/module2/*.x src/module3/*.m`
+* 当你分文件夹来管理多文件时,那么你在导入文件时,需要注意的是,要写清楚导入的文件路径,如`#import "module3/other3.h"`
+
