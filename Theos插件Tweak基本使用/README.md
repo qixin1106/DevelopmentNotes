@@ -187,3 +187,16 @@ export THEOS_DEVICE_IP=192.168.x.xxx
 
 你需要再tweak项目文件夹中创建一个`layout`文件夹, 然后将你的资源copy到其中,`layout`中也可以创建不同的文件夹,总之,里面的目录结构会原封不动的copy到app根目录中.
 
+## tweak安装原理
+
+* 当你`make`时,首先会在`/.theos/`目录下生成`xxx.dylib`动态库
+* 当你`make package` 会在/packages/目录下,生成xxx.deb插件安装包
+* 当你`make install` 会在连接你的设备,来安装你的插件,安装的位置在`/Library/MoblieSubstrate/DynamicLibraries/`
+* 分别是你的xxx.dylib和xxx.plist(就是tweak项目创建时生成那个plist,指定你要hook的appid那个)
+
+## tweak运行原理
+
+* 在Cydia中有一个插件`Cydia Substrate`
+* 当你打开一个app时,它会在`/Library/MoblieSubstrate/DynamicLibraries/`中查找所有的plist,比对其中的appid和你打开的app的id是否一致,如果一致则,去加载对应的动态库.
+* 动态库会对内存中的代码执行流程进行修改.当你原程序中调用了你hook的方法时,将会被调到动态库中的对应方法中.
+
