@@ -786,7 +786,7 @@ Future<int> getTotal(Stream<int> numbers) async {
 好了!!
 
 
-## Generators
+# Generators
 
 在Flutter中，Generator functions是一种特殊的函数，它们可以在需要时生成一个序列。Generator functions使用yield关键字来生成值，而不是return关键字。当函数执行到yield语句时，它会返回一个值并暂停执行，直到下一次调用它时继续执行。这使得它们非常适合于处理大量数据或需要延迟计算的数据。
 
