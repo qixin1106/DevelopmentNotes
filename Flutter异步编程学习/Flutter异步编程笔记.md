@@ -2,22 +2,13 @@
 
 以下内容来自Flutter的youtube频道,在学习的同时,加上自己查阅的资料的,以及在VSCode中的代码实践总结
 
-<<<<<<< HEAD
 * [Isolate](#Isolate)
-=======
-* [Isolate](##Isolate)
->>>>>>> 1f460a60d54985f1ddd1892ff0bab5f3eddce2fb
-* Futures
-* Stream
-* Async/Await
+* [Futures](#Futures)
+* [Stream](#Stream)
+* [Async/Await](#Async/Await)
 * [Generators](#Generators)
 
-<<<<<<< HEAD
 # Isolate
-=======
-
-## Isolate
->>>>>>> 1f460a60d54985f1ddd1892ff0bab5f3eddce2fb
 
 在Flutter中，`Isolate`是一种Dart语言的并发机制，它可以让你在单个Dart程序中同时运行多个代码块，每个代码块都在自己的隔离环境中运行。这意味着每个`Isolate`都有自己的内存堆栈和消息队列，它们之间不能直接共享内存。`Isolate`之间可以通过消息传递进行通信。
 
@@ -661,7 +652,7 @@ UI显示效果是Count: 数字,从1变到10
 **假设我想做一个倒计时的显示效果,是不是可以用这个Stream来实现呢?**
 
 
-# Async / Await
+# Async/Await
 
 在Flutter中，async和await是用于异步编程的关键字。async用于标记一个函数是异步的，而await用于等待异步操作完成。
 
