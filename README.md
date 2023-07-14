@@ -4,6 +4,10 @@
 
 - [异步编程学习笔记](https://github.com/qixin1106/DevelopmentNotes/blob/master/Flutter异步编程学习/Flutter异步编程笔记.md)
 
+### Flutter组件
+
+- [Image](https://github.com/qixin1106/DevelopmentNotes/blob/master/Flutter小组件学习/Image组件.md)
+
 ### 机器人硬件
 
 - [ROS for iOS 笔记](https://github.com/qixin1106/DevelopmentNotes/blob/master/ROS/README.md)
