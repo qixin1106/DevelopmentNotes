@@ -8,6 +8,8 @@
 
 - [Image](https://github.com/qixin1106/DevelopmentNotes/blob/master/Flutter小组件学习/Image组件.md)
 
+- [NavigationBar & NavigationRail](https://github.com/qixin1106/DevelopmentNotes/blob/master/Flutter小组件学习/NavigationBar组件.md)
+
 ### 机器人硬件
 
 - [ROS for iOS 笔记](https://github.com/qixin1106/DevelopmentNotes/blob/master/ROS/README.md)
