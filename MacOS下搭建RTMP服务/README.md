@@ -97,7 +97,48 @@ location /hls {
 
 > > 该命令中使用了 -strict -2 参数，这是因为从 FFmpeg 3.0 版本开始，AAC 编码器默认使用了更严格的标准，不再支持一些非标准的编码参数，因此需要通过 -strict -2 参数指定非标准的编码参数。如果您使用的是较新版本的 FFmpeg，可以尝试不使用 -strict -2 参数，看看是否会有警告或错误提示。
 
-## ffplay拉流
+
+## ffmpeg获取本机可用的设备信息
+
+* `ffmpeg -f avfoundation -list_devices true -i ""`
+
+> 能看到类似如下反馈信息,如有多个屏幕设备,则会显示多个
+
+```js
+[AVFoundation indev @ 0x7f8dedc11080] AVFoundation video devices:
+[AVFoundation indev @ 0x7f8dedc11080] [0] FaceTime HD Camera (Built-in)
+[AVFoundation indev @ 0x7f8dedc11080] [1] USB Camera
+[AVFoundation indev @ 0x7f8dedc11080] [2] Capture screen 0
+[AVFoundation indev @ 0x7f8dedc11080] AVFoundation audio devices:
+[AVFoundation indev @ 0x7f8dedc11080] [0] Unknown USB Audio Device
+[AVFoundation indev @ 0x7f8dedc11080] [1] Built-in Microphone
+```
+
+## ffmpeg推流(摄像头)
+
+* `ffmpeg -f avfoundation -video_device_index 0 -i "0" -f avfoundation -audio_device_index 1 -i "1" -c:v h264_videotoolbox -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f flv rtmp://localhost:1935/live/room`
+
+> * -c:v 这里可以选择`h264_videotoolbox(硬)`或者`libx264(软)`
+
+
+## ffmpeg推流(电脑屏幕)
+
+ * `ffmpeg -f avfoundation -i "2:none" -s 1920x1080 -c:v h264_videotoolbox -b:v 6000k -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f flv rtmp://localhost:1935/live/room`
+ 
+> * -i <选择设备编号:none>, 
+> * -s 1920x1080 表示分辨率
+> * -b:v 6000k 设置比特率,相当于0.75 MB/s,属于高清范畴
+
+> 这里的 "2" 是输入流的索引号，用于指定要播放的特定流。索引号从0开始，表示不同的流。例如，0表示第一个流，1表示第二个流，以此类推。
+
+> 而 ":none" 是输入流的参数，用于指定不使用特定的流。在这种情况下，":none" 表示不使用任何特定的音频或视频流，即不播放任何音频或视频。
+
+> 因此，"-i "2:none"" 的含义是从输入源中选择索引号为2的流，但不使用该流中的音频或视频内容进行播放。请注意，具体的索引号和可用的流取决于输入源的内容和格式。
+
+
+### 以上参数较多可自行搭配使用
+
+## ffplay拉流(不建议,延迟太高)
 
 * `ffplay "rtmp://localhost:1935/live/room live=1"`
 
@@ -113,7 +154,14 @@ location /hls {
 
 > 局域网内其他设备拉流时,请将localhost改为服务设备的ip 
 
+## ffplay拉流(低延迟,建议)
 
+* `ffplay -fflags nobuffer -flags low_delay -max_delay 100 -sync ext -bufsize 1000 -i rtmp://localhost:1935/live/room`
+
+> * -fflags nobuffer：禁用内部缓冲。默认情况下，FFplay 会使用内部缓冲来提供更平滑的播放体验。使用 -fflags nobuffer 参数可以禁用内部缓冲，减少播放延迟，但可能会导致播放不稳定或出现卡顿现象。
+> * -flags low_delay：启用低延迟模式。该参数启用低延迟模式，减少解码器的缓冲，以便更快地将数据传递到显示器进行播放。这有助于减少播放延迟。
+> * -max_delay <delay>：设置最大的延迟时间。该参数限制播放的总延迟时间。延迟超过指定的时间将被丢弃，以避免播放过多积压的数据。例如，-max_delay 100 将最大延迟设置为 100 毫秒。
+> * -sync ext：使用外部时钟同步策略。默认情况下，FFplay 使用内部时钟来同步音视频数据，但这可能会导致一定的延迟。通过使用 -sync ext 参数，FFplay 将使用外部时钟同步策略，以降低音视频同步的延迟。
 
 ## ffmpeg推流(HLS版)
 
@@ -131,27 +179,6 @@ location /hls {
 `http://localhost:8080/hls/room.m3u8`
 
 > 局域网内其他设备拉流时,请将localhost改为服务设备的ip 
-
-
-## ffmpeg推流(摄像头)
-
-使用以下命令查看摄像头设备的名称和参数 
-
-`ffmpeg -f avfoundation -list_devices true -i ""`
-
-执行上述命令后，会输出系统中可用的音视频设备列表，包括摄像头、麦克风、屏幕等。摄像头设备的名称通常为 default 或 0。
-
-```
-[AVFoundation indev @ 0x7f8a7d517640] AVFoundation video devices:
-[AVFoundation indev @ 0x7f8a7d517640] [0] FaceTime HD Camera (Built-in)
-[AVFoundation indev @ 0x7f8a7d517640] [1] USB Camera
-[AVFoundation indev @ 0x7f8a7d517640] [2] Capture screen 0
-[AVFoundation indev @ 0x7f8a7d517640] AVFoundation audio devices:
-[AVFoundation indev @ 0x7f8a7d517640] [0] Unknown USB Audio Device
-[AVFoundation indev @ 0x7f8a7d517640] [1] Built-in Microphone
-```
-
-`ffmpeg -f avfoundation -framerate 30 -video_size 640x480 -i "0" -c:v libx264 -preset ultrafast -tune zerolatency -f flv rtmp://localhost:1935/live/room`
 
 
 ## 其他
