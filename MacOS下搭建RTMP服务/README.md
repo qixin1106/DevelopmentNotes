@@ -180,7 +180,6 @@ location /hls {
 
 > 局域网内其他设备拉流时,请将localhost改为服务设备的ip 
 
-
 ## 其他
 
 ### 安装nginx-full可能的错误
