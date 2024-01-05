@@ -76,6 +76,14 @@
 
 - [二维码登录流程](https://github.com/qixin1106/DevelopmentNotes/blob/master/二维码登录流程/README.md)
 
+### git问题
+
+- [git个人令牌过期问题处理](https://github.com/qixin1106/DevelopmentNotes/blob/master/Github操作/Github个人令牌过期问题/个人令牌过期问题.md)
+
+### 前端学习
+
+- [vue响应式ref_reactive笔记](https://github.com/qixin1106/DevelopmentNotes/blob/master/前端学习/VUE/ref%2Breactive响应式.md)
+
 ### 其他
 
 - [macOS系统文件夹作用记录](https://github.com/qixin1106/DevelopmentNotes/blob/master/macOS系统文件夹作用记录/README.md)
