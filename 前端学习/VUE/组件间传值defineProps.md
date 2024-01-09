@@ -52,3 +52,32 @@
 import { reactive } from "vue"
 let person = reactive({id: "1", name: "jordan", age: 18})
 ```
+
+
+### 限制传参类型+如何给定默认值withDefaults
+
+```ts
+import { defineProps, withDefaults } from "vue";
+import { type Persons } from "./xxxxx";
+
+// list是外部传入的一个变量
+// list是Persons类型的数组(Persons是一个自定义数组类型)
+
+// 只接受list
+defineProps(["list"])
+
+// 接受list + 限制类型
+defineProps<{list: Persons}>()
+
+// 接受list + 限制类型 + 限制必要性 + 指定默认值
+// list? :Person为必要性
+withDefaults(defineProps<{ list?: Persons }>(), {
+    list: () => [{ id: '1', name: "jordan", age: 18 }]
+})
+// 或
+withDefaults(defineProps<{ list?: Persons }>(), {
+    list: function() {
+        return [{ id: '1', name: "jordan", age: 18 }]
+    } 
+})
+```
