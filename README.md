@@ -83,6 +83,9 @@
 ### 前端学习
 
 - [vue响应式ref_reactive笔记](https://github.com/qixin1106/DevelopmentNotes/blob/master/前端学习/VUE/ref%2Breactive响应式.md)
+- [interface接口使用](https://github.com/qixin1106/DevelopmentNotes/blob/master/前端学习/VUE/interface接口使用.md)
+- [组件间传值defineProps](https://github.com/qixin1106/DevelopmentNotes/blob/master/前端学习/VUE/组件间传值defineProps.md)
+- [vue3编程路由跳转](https://github.com/qixin1106/DevelopmentNotes/blob/master/前端学习/VUE/Vue3编程路由跳转.md)
 
 ### 其他
 
