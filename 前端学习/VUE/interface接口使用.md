@@ -13,6 +13,7 @@ export interface PersonInter {
     sayHello: () => void,
 }
 ```
+
 ```ts
 // 在该实现`PersonInter`的`Jordan`类中,我们必须要实现其提供的属性和方法.
 
@@ -32,8 +33,9 @@ class Jordan implements PersonInter {
     }
 }
 ```
+
  interface中也可以定义一些非强制属性和方法,如下:
- 
+
 ```ts
 // 定义一个
 export interface PersonInter {
@@ -85,6 +87,7 @@ import { type PersonInter } from './xxxxx';
 
 const person: PersonInter = { id: "1", name: "jordan", age: 18 }
 ```
+
 此时如果对象的属性,严格按照`PersonInter`的定义来检查,一旦缺少属性,或者增多属性,都会开发时报错.
 
 ![-w802](media/17047847993657.jpg)
@@ -105,6 +108,7 @@ let personlist: Array<PersonInter> = [
 
 上面我们使用`Array<PersonInter>`来定义数组的类型约束,也可以给它起一个别名,利用`type`
 如下:
+
 ```ts
 export type Persons = PersonInter[]
 ```

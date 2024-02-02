@@ -42,7 +42,7 @@
 ```
 
 > ![-w481](media/17047866527364.jpg)
-![-w281](media/17047868020228.jpg)
+> ![-w281](media/17047868020228.jpg)
 
 ### 将person变为一个响应式对象
 
@@ -52,7 +52,6 @@
 import { reactive } from "vue"
 let person = reactive({id: "1", name: "jordan", age: 18})
 ```
-
 
 ### 限制传参类型+如何给定默认值withDefaults
 
