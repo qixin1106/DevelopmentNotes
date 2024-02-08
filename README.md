@@ -88,6 +88,7 @@
 - [vue3编程路由跳转](https://github.com/qixin1106/DevelopmentNotes/blob/master/前端学习/VUE/Vue3编程路由跳转.md)
 - [Pinia使用](https://github.com/qixin1106/DevelopmentNotes/blob/master/前端学习/VUE/Pinia使用.md)
 - [Vue组件间传参](https://github.com/qixin1106/DevelopmentNotes/blob/master/前端学习/VUE/Vue组件间传参.md)
+- [customRef使用](https://github.com/qixin1106/DevelopmentNotes/blob/master/前端学习/VUE/customRef使用.md)
 
 ### 其他
 
