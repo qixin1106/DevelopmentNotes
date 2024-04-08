@@ -1,4 +1,4 @@
-# 工业无人机：科技的力量，改变工作方式
+# Industrial Drones: The Power of Technology, Transforming Work Methods
 
 
 
