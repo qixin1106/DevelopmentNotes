@@ -12,19 +12,19 @@ Imagine, in the scorching summer heat, vast fields of rice await the nourishment
 
 
 
-![](./fa13cfd622d443b3a243f9ef37d613da.png~tplv-0es2k971ck-image.png)
+![](./fa13cfd622d443b3a243f9ef37d613da.png~tplv-0es2k971ck-image.jpg)
 
 Now imagine, in remote mountainous areas, wind turbines stand atop peaks, awaiting the arrival of inspection personnel. The rugged mountain paths and inconvenient transportation make each inspection a great test of the inspectors' physical strength and endurance. However, with our industrial drones, everything becomes much simpler. They can easily fly to the top of the mountains, conducting a comprehensive inspection of the wind turbines, promptly identifying and reporting any potential faults. This not only greatly reduces the workload of inspectors, but also ensures the stable operation of the turbines, providing a continuous supply of clean energy to society.
 
 
 
-![](./e277482e3faa4ad79e5b72c13962973c.png~tplv-0es2k971ck-image.png)
+![](./e277482e3faa4ad79e5b72c13962973c.png~tplv-0es2k971ck-image.jpg)
 
 These are our industrial drones, playing important roles in various fields such as agriculture, energy, transportation, and environmental protection. With the power of technology, they have transformed traditional working methods, increased work efficiency, reduced operating costs, and created more value for society.
 
 
 
-![](./4f5acc92a3544666aed4b359b113ed63.png~tplv-0es2k971ck-image.png)
+![](./4f5acc92a3544666aed4b359b113ed63.png~tplv-0es2k971ck-image.jpg)
 
 
 
