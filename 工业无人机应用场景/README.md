@@ -6,7 +6,7 @@ Across the vast expanse of China, industrial drones soar like eagles, weaving th
 
 
 
-![](/Users/qixin/Documents/GitHub笔记/工业无人机应用场景/9b2cb6423dfe4f43a4f14bdb4986b54d.png~tplv-0es2k971ck-image.png)
+![](./9b2cb6423dfe4f43a4f14bdb4986b54d.png~tplv-0es2k971ck-image.png)
 
 Imagine, in the scorching summer heat, vast fields of rice await the nourishment of pesticides. Traditional spraying methods are time-consuming and labor-intensive, and the results are often uncertain. At this moment, our industrial drones are like heavenly warriors, hovering lightly above the fields, precisely spraying pesticides onto each rice seedling. This not only greatly improves the efficiency of spraying, but also ensures the even distribution of pesticides, thereby increasing crop yields and quality. For farmers, this means higher income and a better life.
 
