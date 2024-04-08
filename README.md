@@ -78,3 +78,7 @@
 ### 实用操作
 
 - [iOS如何导出微信语音聊天的语音](https://github.com/qixin1106/DevelopmentNotes/blob/master/iOS如何导出微信语音聊天/iOS如何导出微信语音聊天的音频.md)
+
+### 感想
+
+- [中国工业无人机应用](https://github.com/qixin1106/DevelopmentNotes/blob/master/工业无人机应用场景/README_CH.md)
