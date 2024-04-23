@@ -1,6 +1,6 @@
 # Go的JSON转化
 
-## 结构体转JSON
+## 结构体 -> JSON
 
 ```go
 package main
@@ -91,7 +91,7 @@ func main() {
 
 
 
-## 将JSON字符串转成结构体
+## JSON -> 结构体
 
 ```go
 package main
@@ -146,5 +146,47 @@ func main() {
 * 导入`"encoding/json"`包
 
 * 使用`json.Unmarshal`将字符串转为结构体，需要将`string`转为`[]byte`类型
+
+
+
+## map -> JSON
+
+```go
+package main
+
+import (
+    "encoding/json"
+    "fmt"
+)
+
+func main() {
+    // 创建一个map m
+    m := map[string]interface{}{
+        "name": "大卫",
+        "age": 10,
+        "address": "北京市",
+        "school": map[string]interface{}{
+            "name": "上地实验小学",
+            "grade": 4,
+            "classNo": 1,
+        },
+    }
+
+    data, err := json.MarshalIndent(m,"", "    ")
+    if err != nil {
+        fmt.Println("Error:", err)
+        return
+    }
+    fmt.Println(string(data))
+}
+```
+
+
+
+## JSON -> map
+
+```go
+
+```
 
 
