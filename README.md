@@ -1,5 +1,8 @@
 # Qixin的开发笔记
 
+### Python
+-[Selenium学习](https://github.com/qixin1106/DevelopmentNotes/blob/master/Python学习/selenium爬虫/README.md)
+
 ### Golang
 
 - [Go的JSON使用](https://github.com/qixin1106/DevelopmentNotes/blob/master/Go的JSON转化/READEME.md)
